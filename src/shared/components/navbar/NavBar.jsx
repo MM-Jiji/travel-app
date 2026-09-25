@@ -4,8 +4,9 @@ import { faBars, fas, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 library.add(fas);
-import { MenuItems } from "./MenuItems";
+import { MenuItems } from "./data/MenuItems";
 import "./styles/NavbarStyles.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function NavBar() {
@@ -24,9 +25,9 @@ export default function NavBar() {
         {MenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <a className={item.cName} href={item.url}>
+              <Link className={item.cName} to={item.url}>
                 <FontAwesomeIcon icon={item.icon} /> {item.title}
-              </a>
+              </Link>
             </li>
           );
         })}
