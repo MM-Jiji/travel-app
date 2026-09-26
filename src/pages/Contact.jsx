@@ -1,7 +1,15 @@
+import HeroSection from "../shared/components/hero/HeroSection";
+import ContactImg from "/assets/2.jpg";
+
 export default function Contact() {
   return (
     <>
-      <h1>This is contact</h1>
+      <HeroSection
+        cName="hero-mid"
+        heroImg={ContactImg}
+        title="Contact"
+        btnClassName="hide"
+      />
     </>
   );
 }

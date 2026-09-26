@@ -1,7 +1,17 @@
+import HeroSection from "../shared/components/hero/HeroSection";
+import heroImg from "/assets/12.jpg";
 export default function Home() {
   return (
     <>
-      <h1>This is home</h1>
+      <HeroSection
+        cName="hero"
+        heroImg={heroImg}
+        title="Your Journey Your Story"
+        text="Choose Your Favourite Destination."
+        btnText="Travel Plan"
+        url="/"
+        btnClassName="show"
+      />
     </>
   );
 }
